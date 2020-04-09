@@ -18,11 +18,18 @@ import lombok.ToString;
 
 @Entity
 @Table(name="tbl_book")
-//@Setter
+//@Setter 
 //@Getter
 @ToString
 public class Book {
 	
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", sku=" + sku + ", name=" + name + ", description=" + description + ", unitPrice="
+				+ unitPrice + ", imageURL=" + imageURL + ", active=" + active + ", unitsInStock=" + unitsInStock
+				+ ", createdOn=" + createdOn + ", updatedOn=" + updatedOn + ", category=" + category + "]";
+	}
+
 	public Long getId() {
 		return id;
 	}

@@ -22,10 +22,11 @@ import lombok.ToString;
 @ToString
 public class BookCategory {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
+	@Override
+	public String toString() {
+		return "BookCategory [id=" + id + ", categoryName=" + categoryName + ", book=" + book + "]";
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -49,7 +50,12 @@ public class BookCategory {
 	public void setBook(Set<Book> book) {
 		this.book = book;
 	}
-
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
 	@Column(name="category_name")
 	private String categoryName;
 	
