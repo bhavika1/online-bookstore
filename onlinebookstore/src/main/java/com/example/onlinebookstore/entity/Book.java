@@ -26,7 +26,7 @@ public class Book {
 	@Override
 	public String toString() {
 		return "Book [id=" + id + ", sku=" + sku + ", name=" + name + ", description=" + description + ", unitPrice="
-				+ unitPrice + ", imageURL=" + imageURL + ", active=" + active + ", unitsInStock=" + unitsInStock
+				+ unitPrice + ", imageUrl=" + imageUrl + ", active=" + active + ", unitsInStock=" + unitsInStock
 				+ ", createdOn=" + createdOn + ", updatedOn=" + updatedOn + ", category=" + category + "]";
 	}
 
@@ -70,12 +70,12 @@ public class Book {
 		this.unitPrice = unitPrice;
 	}
 
-	public String getImageURL() {
-		return imageURL;
+	public String getImageUrl() {
+		return imageUrl;
 	}
 
-	public void setImageURL(String imageURL) {
-		this.imageURL = imageURL;
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
 
 	public boolean isActive() {
@@ -132,7 +132,7 @@ public class Book {
 	private BigDecimal unitPrice;
 	
 	@Column(name="image_url")
-	private String imageURL;
+	private String imageUrl;
 	
 	private boolean active;
 	
