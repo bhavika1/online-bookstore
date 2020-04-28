@@ -1,20 +1,21 @@
-<table border="1">
-<thead>
-    <tr>
-        <th></th>
+<table border ="1" class="table">
+    <thead>
+      <tr>
+          <th></th>
         <th>Name</th>
         <th>Description</th>
         <th>Price</th>
-    </tr>
-</thead>
-<tbody>
-    <tr *ngFor="let book of books">
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
         <td>
-            <img src="http://placehold.it/250*300" height ="50">
-        </td>
+             <!-- <img src ="assets/images/books/text-100.jpg" height="50">  -->
+              <img [src] ="book.imageUrl" height="50"> 
+        </td> 
         <td>{{book.name}}</td>
         <td>{{book.description}}</td>
-        <td>{{book.unitPrice | currency : 'INR'}}</td>
-    </tr>
-</tbody>
-</table>
+        <td>{{book.unitPrice | currency: 'INR'}}</td>
+      </tr>
+    </tbody>
+  </table>
